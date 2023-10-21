@@ -6,7 +6,7 @@ import path from "path";
 import Users from "./cms/collections/Users";
 
 export default buildConfig({
-  serverURL: "http://localhost:3000",
+  serverURL: process.env.SERVER_URL || "http://localhost:3000",
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),

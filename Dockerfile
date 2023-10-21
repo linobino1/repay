@@ -1,7 +1,7 @@
 FROM node:18-bookworm-slim as base
 
-ARG STATIC_URL
-ENV STATIC_URL $STATIC_URL
+ARG SERVER_URL
+ENV SERVER_URL $SERVER_URL
 
 FROM base as builder
 
