@@ -1,3 +1,4 @@
+import type { RichTextAdapter } from "payload/types";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { webpackBundler } from "@payloadcms/bundler-webpack";
@@ -11,7 +12,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  editor: lexicalEditor({}),
+  editor: lexicalEditor({}) as RichTextAdapter,
   db: mongooseAdapter({
     url: process.env.MONGODB_URI ?? false,
   }),
