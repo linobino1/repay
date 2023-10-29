@@ -5,6 +5,7 @@ import { webpackBundler } from "@payloadcms/bundler-webpack";
 import { buildConfig } from "payload/config";
 import path from "path";
 import Users from "./cms/collections/Users";
+import Media from "./cms/collections/Media";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || "http://localhost:3000",
@@ -19,7 +20,10 @@ export default buildConfig({
       dbName: process.env.MONGODB_DBNAME,
     },
   }),
-  collections: [Users],
+  collections: [
+    Users,
+    Media,
+  ],
   typescript: {
     outputFile: path.resolve(__dirname, "cms/payload-types.ts"),
   },
