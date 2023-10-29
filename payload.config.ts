@@ -15,9 +15,9 @@ export default buildConfig({
   },
   editor: lexicalEditor({}) as RichTextAdapter,
   db: mongooseAdapter({
-    url: process.env.MONGODB_URI ?? false,
+    url: process.env.MONGO_URL ?? false,
     connectOptions: {
-      dbName: process.env.MONGODB_DBNAME,
+      dbName: process.env.MONGO_DBNAME,
     },
   }),
   collections: [
