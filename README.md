@@ -30,6 +30,6 @@ yarn start
 
 ## Deployment
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/vhqnvU?referralCode=0dh7vZ)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/iRjSBO?referralCode=0dh7vZ)
 
 one-click deployment on [Railway](https://railway.app)! 🚂
