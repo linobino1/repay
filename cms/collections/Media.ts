@@ -7,7 +7,7 @@ const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
-    staticDir: path.resolve(__dirname, '../../media'),
+    staticDir: process.env.MEDIA_DIR ?? path.resolve(__dirname, '../../media'),
     imageSizes: [
       {
         name: 'thumbnail',
